@@ -1,27 +1,82 @@
 .left-container {
-    width: 55% !important;
+    /*width: 55% !important;
     height: 1024px;
+    */
     background-color: #ffffff;
 }
 
 .right-container {
-    width: 45% !important;
+    /*width: 45% !important;
+    height: 1024px;
+    */
     height: 1024px;
     background-color: #0176ff;
 }
 
-
-.title {
+.title {   
     color: #0b5cff;
     font-size: 28px;
-    font-weight: bold;
+    font-weight: 500;
     margin-top: 30px;
-    margin-left: 30px;
+    padding-left: 40px;      
 }
-
 
 .filter {
-  float:right;
-  margin-right: 50px;
+    float:right;
+    padding-right: 40px;
 }
 
+.table-container { 
+    margin-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+table {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.table thead tr:nth-child(2) {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6a6a6a;
+    
+    /*
+    border-top-style: solid;
+    border-top-color: #979797;
+    border-top-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #979797;
+    border-bottom-width: 1px;
+    */
+    border-top: 1px solid rgba(121, 121, 121, 0.13);
+    border-bottom: 1px solid rgba(121, 121, 121, 0.13);
+
+}
+
+.table th, .table td { 
+     border-top: none !important; 
+     padding:20px;  
+ }
+
+.invoices {
+    font-size: 18px;
+    font-weight: 500;
+    color: #797979;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(194, 194, 194, 0.09);
+    border-left: solid 2px #0277ff ;
+}
+
+.table tbody tr {
+    font-size: 14px;
+    font-weight: 400;
+    color: #6a6a6a;
+}
+
+.borderless td, .borderless th {
+    border: none;
+}
