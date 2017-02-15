@@ -1,16 +1,20 @@
-
 <div class="container-fluid">
-  
+
   <!--Invoice list-->
   <div class="col-md-7 left-container">
-    <div class="title">
-      All invoices - 2016
-     
+
+    <div class="row">
+      <div class="title">
+        All invoices - 2016
+        <span class="filter">
+          <img src="../assets/images/filter.png">
+       </span>
+      </div>
     </div>
 
 
   </div>
-  
+
   <!--Invoice detail-->
   <div class="col-md-5 right-container">
     <invoice-detail [invoice]="selectedInvoice"></invoice-detail>
