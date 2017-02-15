@@ -1,0 +1,11 @@
+.left-container {
+    width: 55% !important;
+    height: 1024px;
+    background-color: #ffffff;
+}
+
+.right-container {
+   width: 45% !important;
+    height: 1024px;
+    background-color: #0176ff;
+}

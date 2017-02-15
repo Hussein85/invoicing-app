@@ -1,3 +1,17 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container-fluid">
+  
+  <!--Invoice list-->
+  <div class="col-md-7 left-container">
+    <h2>
+      All invoices
+    </h2>
+
+
+
+  </div>
+  
+  <!--Invoice detail-->
+  <div class="col-md-5 right-container">
+    <invoice-detail [invoice]="selectedInvoice"></invoice-detail>
+  </div>
+</div>
