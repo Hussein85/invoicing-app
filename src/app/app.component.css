@@ -2,15 +2,50 @@
     /*width: 55% !important;
     height: 1024px;
     */
+    width: 800px;
+    height: 1024px;
     background-color: #ffffff;
+    float:left;
+    box-shadow: 0 2px 44px 0 rgba(0, 0, 0, 0.4);
 }
 
 .right-container {
     /*width: 45% !important;
     height: 1024px;
     */
+    width: 641px;
     height: 1024px;
     background-color: #0176ff;
+    overflow: hidden;
+    position: relative;
+     
+}
+
+
+.Rectangle-2 {
+    width: 641px;
+    height: 1024px;
+    object-fit: contain;
+    opacity: 0.35;
+}
+
+.Path-2 {
+    width: 641.5px;
+    height: 341.9px;
+    object-fit: contain;
+    opacity: 0.5;
+    position: absolute;
+    bottom:-10px;
+}
+
+.Path-2_2 {
+    width: 554.5px;
+    height: 200.9px;
+    object-fit: contain;
+    opacity: 0.6;
+    position: absolute;
+    left: 87px;
+    bottom:-25px;
 }
 
 .title {   
@@ -46,8 +81,9 @@ table {
 }
 
 .table th, .table td { 
-     border-top: none !important; 
-     padding:20px;  
+    border-top: none !important; 
+    padding-left: 30px; 
+    padding-top: 12px;   
  }
 
 .invoices {
@@ -58,7 +94,8 @@ table {
 
 .table tbody tr:hover {
     background-color: rgba(194, 194, 194, 0.09);
-    border-left: solid 2px #0277ff ;
+    /*border-left: solid 2px #0277ff;*/
+    cursor: pointer;
 }
 
 .table tbody tr {

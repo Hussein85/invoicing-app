@@ -6,6 +6,8 @@ import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { AppComponent } from './app.component';
 import { InvoiceDetailComponent } from './invoice-detail/invoice-detail.component';
+import { InvoiceService } from './invoice.service';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,7 @@ import { InvoiceDetailComponent } from './invoice-detail/invoice-detail.componen
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [InvoiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

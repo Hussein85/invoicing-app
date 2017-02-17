@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
   <!--Invoice list-->
-  <div class="col-md-7 left-container">
+  <div class="left-container">
 
     <div class="row">
       <div class="title">
@@ -29,19 +29,12 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Checking</td>
-              <td>1267451****-WOLFE</td>
-              <td>Active</td>
-              <td>USD</td>
-              <td>$6,266.33</td>
-            </tr>
-              <tr>
-              <td>Checking</td>
-              <td>1267451****-WOLFE</td>
-              <td>Active</td>
-              <td>USD</td>
-              <td>$6,266.33</td>
+            <tr *ngFor='let invoice of invoices'>
+              <td>{{invoice.type}}</td>
+              <td>{{invoice.accountName}}</td>
+              <td>{{invoice.status}}</td>
+              <td>{{invoice.currency}}</td>
+              <td>{{invoice.balance}}</td>
             </tr>
           </tbody>
         </table>
@@ -53,7 +46,17 @@
   </div>
 
   <!--Invoice detail-->
-  <div class="col-md-5 right-container">
+  <div class="right-container">
+
+    <img class="Rectangle-2" src="../assets/images/rectangle-2.png"
+      srcset="../assets/images/rectangle-2@2x.png 2x, ../assets/images/rectangle-2@3x.png 3x">
+    
+    <img  class="Path-2" src="../assets/images/path-2.png"
+      srcset="../assets/images/path-2@2x.png 2x, ../assets/images/path-2@3x 3x">
+
+    <img  class="Path-2_2" src="../assets/images/path-2_2.png"
+      srcset="../assets/images/path-2_2@2x.png 2x, ../assets/images/path-2_2@3x 3x">
+
     <invoice-detail [invoice]="selectedInvoice"></invoice-detail>
   </div>
 

@@ -5,4 +5,5 @@ export class Invoice {
   status: string;
   currency: string;
   balance: number;
+  notes: string;
 }
