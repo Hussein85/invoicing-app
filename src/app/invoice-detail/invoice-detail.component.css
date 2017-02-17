@@ -49,6 +49,8 @@ td {
     font-size: 14px;
     font-weight: normal;
     color: #6a6a6a;
+    padding-top:0px !important;
+    vertical-align:top;
 }
 
 tr:nth-child(2n+3) {
@@ -63,4 +65,5 @@ td:nth-child(2n) {
     padding-left: 105px;
     padding-right: 30px;
 }
+
 
