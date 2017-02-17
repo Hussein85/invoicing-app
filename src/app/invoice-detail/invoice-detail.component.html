@@ -1,38 +1,40 @@
-<div *ngIf="true" class="invoice-detail-container">
+<div *ngIf="invoice" class="invoice-detail-container">
   <img class="trump-job-creator__oPt" src="../../assets/images/trump-job-creator-o-pt.png"
      srcset="../../assets/images/trump-job-creator-o-pt@2x.png 2x, 
              ../../assets/images/trump-job-creator-o-pt@3x.png 3x" >
    
-      <h2 class="invoice-detail-title">5719371**** - MAENGUNE</h2> 
+      <h2 class="invoice-detail-title">{{invoice.accountName}}</h2> 
 
-      <table  border="0" cellpadding="0" cellspacing="0" >
+      <table >
         <tr>
           <th>TYPE</th>
           <th>ACCOUNT NAME</th>
         </tr>
         <tr>
-          <td>Savings</td>
-          <td>5719371**** - MAENGUNE</td>  
+          <td>{{invoice.type}}</td>
+          <td>{{invoice.accountName}}</td>  
         </tr>
         <tr>
           <th>STATUS</th>
           <th>CURRENCY</th>
         </tr>
         <tr>
-          <td>Active</td>
-          <td>USD</td>  
+          <td>{{invoice.status}}</td>
+          <td>{{invoice.currency}}</td>  
         </tr>
         <tr>
           <th>BALANCE</th>
           <th>NOTES</th>
         </tr>
        <tr>
-          <td clearfix>$10,998.10</td>
-          <td>Lorem ipsum dolor sit amet, viris blandit mediocrem id.</td>  
+          <td>{{invoice.balance}}</td>
+          <td>{{invoice.notes}}</td>  
         </tr>
       </table>
 
-   <img class="Close" src="../../assets/images/close.png" 
+   <img (click)="closeWindow()" class="Close" src="../../assets/images/close.png" 
       srcset="../../assets/images/close@2x.png 2x, ../../assets/images/close@3x.png 3x">
      
 </div>
+
+<pre>{{invoice | json}}</pre>

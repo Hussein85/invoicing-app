@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 import { Invoice } from '../invoice';
 
@@ -9,12 +9,16 @@ import { Invoice } from '../invoice';
 })
 export class InvoiceDetailComponent implements OnInit {
 
-  @Input()
-  invoice: Invoice;
+  @Input() invoice: Invoice;
+  @Output() close = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  closeWindow(){
+    this.close.emit(true);
   }
 
 }

@@ -29,7 +29,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor='let invoice of invoices'>
+            <tr *ngFor='let invoice of invoices' (click)="onSelect(invoice)" [class.selected]="invoice === selectedInvoice">
               <td>{{invoice.type}}</td>
               <td>{{invoice.accountName}}</td>
               <td>{{invoice.status}}</td>
@@ -61,12 +61,10 @@
       <img class="menu-img" src="../assets/images/menu.png" srcset="../assets/images/menu@2x.png 2x, ../assets/images/menu@3x.png 3x">
      </div>
 
-    <invoice-detail [invoice]="selectedInvoice"></invoice-detail>
+    <invoice-detail *ngIf="!isClosed" [invoice]="selectedInvoice" (close)="close($event)"></invoice-detail>
   </div>
 
 </div>
-
-
 
 
 
