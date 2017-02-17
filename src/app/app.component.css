@@ -1,7 +1,4 @@
 .left-container {
-    /*width: 55% !important;
-    height: 1024px;
-    */
     width: 800px;
     height: 1024px;
     background-color: #ffffff;
@@ -10,17 +7,12 @@
 }
 
 .right-container {
-    /*width: 45% !important;
-    height: 1024px;
-    */
     width: 641px;
     height: 1024px;
     background-color: #0176ff;
     overflow: hidden;
-    position: relative;
-     
+    position: relative;   
 }
-
 
 .Rectangle-2 {
     width: 641px;
@@ -134,3 +126,4 @@ table {
     margin-top: -12.5%;
     cursor: pointer;
 }
+
