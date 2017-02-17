@@ -29,7 +29,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor='let invoice of invoices' (click)="onSelect(invoice)" [class.selected]="invoice === selectedInvoice">
+            <tr *ngFor='let invoice of invoices' (click)="onSelect(invoice)" [class.selected]="invoice === selectedInvoice && isClosed === false">
               <td>{{invoice.type}}</td>
               <td>{{invoice.accountName}}</td>
               <td>{{invoice.status}}</td>
