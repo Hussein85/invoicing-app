@@ -133,3 +133,13 @@ table {
     border-left: solid 2px #0277ff;
     cursor: pointer;
 }
+
+span {
+    cursor: pointer;
+}
+
+.caret-down{
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}

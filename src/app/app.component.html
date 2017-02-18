@@ -21,15 +21,15 @@
               <th class="invoices" colspan="5">Invoices</th>
             </tr>
             <tr>
-              <th>Type<span class="caret"></span></th>
-              <th>Account Name<span class="caret"></span></th>
-              <th>Status<span class="caret"></span></th>
-              <th>Currency<span class="caret"></span></th>
-              <th>Balance<span class="caret"></span></th>
+              <th><span (click)="sort('type')">Type<span [ngClass]="ascending['type'] ? 'caret' : 'caret caret-down'"></span></span></th>
+              <th><span (click)="sort('accountName')">Account Name<span [ngClass]="ascending['accountName'] ? 'caret' : 'caret caret-down'"></span></span></th>
+              <th><span (click)="sort('status')">Status<span [ngClass]="ascending['status'] ? 'caret' : 'caret caret-down'"></span></span></th>
+              <th><span (click)="sort('currency')">Currency<span [ngClass]="ascending['currency'] ? 'caret' : 'caret caret-down'"></span></span></th>
+              <th><span (click)="sort('balance')">Balance<span [ngClass]="ascending['balance'] ? 'caret' : 'caret caret-down'"></span></span></th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor='let invoice of invoices' (click)="onSelect(invoice)" [class.selected]="invoice === selectedInvoice && isClosed === false">
+            <tr *ngFor='let invoice of sortedInvoices' (click)="onSelect(invoice)" [class.selected]="invoice === selectedInvoice && isClosed === false">
               <td>{{invoice.type}}</td>
               <td>{{invoice.accountName}}</td>
               <td>{{invoice.status}}</td>
@@ -39,7 +39,7 @@
           </tbody>
         </table>
       </div>
-            
+         
             
     </div>
 
@@ -66,5 +66,5 @@
 
 </div>
 
-
+<!--<pre>{{ascending | json}}</pre>-->
 
