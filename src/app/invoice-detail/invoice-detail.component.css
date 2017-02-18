@@ -25,7 +25,7 @@
     margin-left: 30px;
 }
 
-.Close {
+.close-button {
     width: 25px;
     height: 25px;
     position:absolute;
@@ -35,34 +35,36 @@
     bottom:-55px;
 }
 
-th {
-    text-align: left;
+
+/*Add space between rows*/
+tr:nth-child(2n+3) {
+    border-top: 15px solid transparent;
+}
+
+th:nth-child(2n+1) {
     padding-left: 30px;
+    width: 200px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #6a6a6a;
+}
+
+th:nth-child(2n) {
+    width: 181px;   
     font-size: 10px;
     font-weight: bold;
     color: #6a6a6a;
 }
 
 td {
-    text-align: left;
-    padding-left: 30px;
     font-size: 14px;
     font-weight: normal;
     color: #6a6a6a;
     vertical-align:top;
-}
-
-tr:nth-child(2n+3) {
-    border-top: 15px solid transparent;
-}
-
-th:nth-child(2n) {
-    padding-left: 105px;
-}
-
-td:nth-child(2n) {
-    padding-left: 105px;
-    padding-right: 30px;
+    width: 200px;
 }
 
 
+td:nth-child(2n+1) {
+    padding-left: 30px;
+}

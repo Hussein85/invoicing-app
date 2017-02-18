@@ -27,12 +27,12 @@
           <th>NOTES</th>
         </tr>
        <tr>
-          <td>{{invoice.balance}}</td>
+          <td>{{invoice.balance | currency:'USD':true}}</td>
           <td>{{invoice.notes}}</td>  
         </tr>
       </table>
 
-   <img (click)="closeWindow()" class="Close" src="../../assets/images/close.png" 
+   <img (click)="closeWindow()" class="close-button" src="../../assets/images/close.png" 
       srcset="../../assets/images/close@2x.png 2x, ../../assets/images/close@3x.png 3x">
      
 </div>
