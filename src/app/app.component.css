@@ -117,6 +117,33 @@ table {
     position:absolute;
 }
 
+.btn-group {
+    width: 90px;
+    height: 90px; 
+    right: 50px;
+    top:50px;
+    position:absolute; 
+}
+
+.btn-default{
+    width: 90px;
+    height: 90px; 
+    border-radius: 0px;
+}
+
+.dropdown-menu-right{
+    width: 300px !important;
+    /*box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.27);*/
+    box-shadow:10px 10px 5px rgba(0, 0, 0, 0.27);
+}
+
+.dropdown-item{
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #6a6a6a;
+}
+
 .menu-img {
     width: 46%;
     height: 25%;
