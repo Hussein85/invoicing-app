@@ -1,3 +1,11 @@
-<p>
-  search-bar works!
-</p>
+<div id="custom-search-input">
+  <div class="input-group col-md-12">
+    <input type="text" [ngModel]="searchKey" class="form-control input-lg" 
+      (ngModelChange)="valuechange($event)" placeholder="Filter by account name..."/>
+    <span class="input-group-btn">
+        <div class="search-icon">
+            <i class="glyphicon glyphicon-search"></i>
+        </div>
+    </span>
+  </div>
+</div>

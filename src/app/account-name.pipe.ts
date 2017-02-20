@@ -3,7 +3,7 @@ import {  PipeTransform, Pipe } from '@angular/core';
 import { Invoice } from './invoice';
 
 @Pipe({
-    name: 'accountName'
+    name: 'accountNameFilter'
 })
 export class AccountNamePipe implements PipeTransform {
 

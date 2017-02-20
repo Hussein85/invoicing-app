@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
 
     sortedInvoices: Invoice[];
     sortBy = "";
-    accountFilter = "";
+    searchKey = "";
       
     ascending = { 
       type: true, 
@@ -60,7 +60,7 @@ export class AppComponent implements OnInit {
     }
 
     onClick(filterText){
-      this.accountFilter = filterText;
+      this.searchKey = filterText;
     }
 
 }
