@@ -8,12 +8,16 @@ import { DropdownModule } from 'ng2-bootstrap';
 import { AppComponent } from './app.component';
 import { InvoiceDetailComponent } from './invoice-detail/invoice-detail.component';
 import { InvoiceService } from './invoice.service';
+import { AccountNamePipe } from './account-name.pipe';
+import { FilterComponent } from './filter/filter.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    InvoiceDetailComponent
+    InvoiceDetailComponent,
+    AccountNamePipe,
+    FilterComponent
   ],
   imports: [
     AlertModule.forRoot(),

@@ -6,9 +6,16 @@
     <div class="row">
       <div class="title">
         All invoices - 2016
-        <span class="filter">
-          <img src="../assets/images/filter.png">
-       </span>
+
+        <div class="btn-group filter-container" dropdown>
+          <a id="single-button" type="button" dropdownToggle>
+            <img src="../assets/images/filter.png">
+          </a>
+          
+          <invoice-filter dropdownMenu class="dropdown-menu-right filter-box" (accountFilter)="onClick($event)"> </invoice-filter>
+  
+        </div>
+
       </div>
     </div>
 
@@ -29,7 +36,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor='let invoice of sortedInvoices' (click)="onSelect(invoice)" [class.selected]="invoice === selectedInvoice && isClosed === false">
+            <tr *ngFor='let invoice of sortedInvoices | accountName:accountFilter' (click)="onSelect(invoice)" [class.selected]="invoice === selectedInvoice && isClosed === false">
               <td>{{invoice.type}}</td>
               <td>{{invoice.accountName}}</td>
               <td>{{invoice.status}}</td>
@@ -60,7 +67,7 @@
     
       <!--<img  class="menu-img" src="../assets/images/menu.png" srcset="../assets/images/menu@2x.png 2x, ../assets/images/menu@3x.png 3x">-->
 
-        <div class="btn-group" dropdown>
+        <div class="btn-group meny-container" dropdown>
           <a id="single-button" type="button" class="btn btn-default" dropdownToggle>
             <img class="menu-img" src="../assets/images/menu.png" srcset="../assets/images/menu@2x.png 2x, ../assets/images/menu@3x.png 3x">
           </a>
@@ -76,13 +83,10 @@
           </ul>
         </div>
 
-    
-
     <invoice-detail *ngIf="!isClosed" [invoice]="selectedInvoice" (close)="close($event)"></invoice-detail>
   </div>
 
 </div>
 
-<!--<pre>{{ascending | json}}</pre>-->
 
 

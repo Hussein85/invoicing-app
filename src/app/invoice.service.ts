@@ -7,7 +7,7 @@ const INVOICES: Invoice[] = [
     {
         "id": 1,
         "type": "Checking",
-        "accountName": "12674511234-WOLFE",
+        "accountName": "1267451**** - WOLFE",
         "status": "Active",
         "currency": "USD",
         "balance": 6266.33,
@@ -34,7 +34,7 @@ const INVOICES: Invoice[] = [
     {
         "id": 4,
         "type": "Checking",
-        "accountName": "12674511234-WOLFE",
+        "accountName": "1267451**** - WOLFE",
         "status": "Active",
         "currency": "USD",
         "balance": 6266.33,
@@ -61,7 +61,7 @@ const INVOICES: Invoice[] = [
     {
         "id": 7,
         "type": "Checking",
-        "accountName": "12674511234-WOLFE",
+        "accountName": "1267451**** - WOLFE",
         "status": "Active",
         "currency": "USD",
         "balance": 6266.33,
@@ -88,7 +88,7 @@ const INVOICES: Invoice[] = [
     {
         "id": 10,
         "type": "Checking",
-        "accountName": "12674511234-WOLFE",
+        "accountName": "1267451**** - WOLFE",
         "status": "Active",
         "currency": "USD",
         "balance": 6266.33,
@@ -115,7 +115,7 @@ const INVOICES: Invoice[] = [
     {
         "id": 13,
         "type": "Checking",
-        "accountName": "12674511234-WOLFE",
+        "accountName": "1267451**** - WOLFE",
         "status": "Active",
         "currency": "USD",
         "balance": 6266.33,
@@ -142,7 +142,7 @@ const INVOICES: Invoice[] = [
     {
         "id": 16,
         "type": "Checking",
-        "accountName": "12674511234-WOLFE",
+        "accountName": "1267451**** - WOLFE",
         "status": "Active",
         "currency": "USD",
         "balance": 6266.33,
@@ -169,7 +169,7 @@ const INVOICES: Invoice[] = [
     {
         "id": 19,
         "type": "Checking",
-        "accountName": "12674511234-WOLFE",
+        "accountName": "1267451**** - WOLFE",
         "status": "Active",
         "currency": "USD",
         "balance": 6266.33,
