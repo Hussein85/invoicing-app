@@ -6,14 +6,13 @@
     <div class="row">
       <div class="title">
         All invoices - 2016
-
+        
+        <!--Filter Component-->
         <div class="btn-group filter-container" dropdown>
-          <a id="single-button" type="button" dropdownToggle>
+          <a class="filter" type="button" dropdownToggle>
             <img src="../assets/images/filter.png">
-          </a>
-          
+          </a>    
           <invoice-filter dropdownMenu class="dropdown-menu-right filter-box" (accountFilter)="onClick($event)"> </invoice-filter>
-  
         </div>
 
       </div>
@@ -64,10 +63,7 @@
     <img class="Path-2_2" src="../assets/images/path-2_2.png"
       srcset="../assets/images/path-2_2@2x.png 2x, ../assets/images/path-2_2@3x 3x">
 
-    
-      <!--<img  class="menu-img" src="../assets/images/menu.png" srcset="../assets/images/menu@2x.png 2x, ../assets/images/menu@3x.png 3x">-->
-
-        <div class="btn-group meny-container" dropdown>
+        <!--<div class="btn-group meny-container" dropdown>
           <a id="single-button" type="button" class="btn btn-default" dropdownToggle>
             <img class="menu-img" src="../assets/images/menu.png" srcset="../assets/images/menu@2x.png 2x, ../assets/images/menu@3x.png 3x">
           </a>
@@ -81,7 +77,9 @@
             <li class="divider dropdown-divider"></li>
             <li role="menuitem"><a class="dropdown-item" href="#">Exit</a></li>
           </ul>
-        </div>
+        </div>-->
+
+        <invoice-menu></invoice-menu>
 
     <invoice-detail *ngIf="!isClosed" [invoice]="selectedInvoice" (close)="close($event)"></invoice-detail>
   </div>
