@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
-import { Invoice } from '../../invoice';
-import { InvoiceService } from '../../invoice.service';
+import { Invoice } from '../invoice';
+import { InvoiceService } from '../invoice.service';
 
 @Component({
   selector: 'invoice-list',

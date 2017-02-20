@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Invoice } from './invoice';
+import { Invoice } from './invoices/invoice';
 
 
 @Component({

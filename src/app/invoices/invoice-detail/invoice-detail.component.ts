@@ -8,7 +8,7 @@ import { Invoice } from '../invoice';
   styleUrls: ['./invoice-detail.component.css']
 })
 export class InvoiceDetailComponent implements OnInit {
-
+  
   @Input() invoice: Invoice;
   @Output() close = new EventEmitter();
 
@@ -22,3 +22,4 @@ export class InvoiceDetailComponent implements OnInit {
   }
 
 }
+

@@ -5,14 +5,14 @@ import { HttpModule } from '@angular/http';
 import { AlertModule } from 'ng2-bootstrap';
 import { DropdownModule } from 'ng2-bootstrap';
 
-import { InvoiceService } from './invoice.service';
-import { AccountNamePipe } from './account-name.pipe';
+import { InvoiceService } from './invoices/invoice.service';
+import { AccountNamePipe } from './invoices/account-name.pipe';
 
 import { AppComponent } from './app.component';
-import { InvoiceListComponent } from './components/invoice-list/invoice-list.component';
-import { InvoiceDetailComponent } from './invoice-detail/invoice-detail.component';
-import { SearchBarComponent } from './components/search-bar/search-bar.component';
-import { MenuComponent } from './components/menu/menu.component';
+import { InvoiceListComponent } from './invoices/invoice-list/invoice-list.component';
+import { InvoiceDetailComponent } from './invoices/invoice-detail/invoice-detail.component';
+import { SearchBarComponent } from './invoices/search-bar/search-bar.component';
+import { MenuComponent } from './invoices/menu/menu.component';
 
 
 @NgModule({
