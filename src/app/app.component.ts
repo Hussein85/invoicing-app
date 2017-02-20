@@ -6,7 +6,7 @@ import { InvoiceService } from './invoice.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'] 
 })
 export class AppComponent implements OnInit {
 
@@ -25,7 +25,6 @@ export class AppComponent implements OnInit {
       currency: true,
       balance: true  
     };
-
 
     constructor(private invoiceService:InvoiceService ) { }
 
@@ -62,7 +61,6 @@ export class AppComponent implements OnInit {
 
     onClick(filterText){
       this.accountFilter = filterText;
-
     }
 
 }
