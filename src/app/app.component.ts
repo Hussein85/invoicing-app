@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Invoice } from './invoice';
 
-import { InvoiceService } from './invoice.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +14,6 @@ export class AppComponent implements OnInit {
     isClosed: Boolean;
 
     sortedInvoices: Invoice[];
-    sortBy = "";
     searchKey = "";
       
     ascending = { 
@@ -26,41 +24,20 @@ export class AppComponent implements OnInit {
       balance: true  
     };
 
-    constructor(private invoiceService:InvoiceService ) { }
+    constructor() { }
 
-    ngOnInit() {
-      this.invoices = this.invoiceService.getInvoices();
-      this.sortedInvoices = this.invoices.slice();
-    }
+    ngOnInit() { }
 
-    onSelect(invoice){
+    getSelectedInvoice(invoice){
       this.selectedInvoice = invoice;
-      this.isClosed = false;
     }
 
-    close(isClosed: Boolean) {
-        this.isClosed = isClosed;
+    getIsClosed(isClosed){
+      this.isClosed = isClosed;
     }
 
-    sort(sortBy) {
-      if(this.ascending[sortBy]){
-          this.sortedInvoices.sort(function(a, b) {
-            var x = a[sortBy]; var y = b[sortBy];
-            return ((x < y) ? -1 : ((x > y) ? 1 : 0));
-          });
-      }else{
-        this.sortedInvoices.sort(function(a, b) {
-            var x = a[sortBy]; var y = b[sortBy];
-            return ((x > y) ? -1 : ((x < y) ? 1 : 0));
-          });
-      }
-
-      this.ascending[sortBy] = !this.ascending[sortBy]
-     
-    }
-
-    onClick(filterText){
-      this.searchKey = filterText;
+    getSearchKey(searchKey){
+      this.searchKey = searchKey;
     }
 
 }

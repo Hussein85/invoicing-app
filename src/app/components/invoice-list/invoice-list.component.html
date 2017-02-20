@@ -1,3 +1,30 @@
-<p>
-  invoice-list works!
-</p>
+<div class='table-container'>
+  <table class='table borderless' *ngIf="sortedInvoices.length > 0">
+    <thead>
+      <tr>
+        <th class="invoices" colspan="5">Invoices</th>
+      </tr>
+      <tr>
+        <th><span (click)="sort('type')">Type<span [ngClass]="ascending['type'] ? 'caret' : 'caret caret-down'"></span></span>
+        </th>
+        <th><span (click)="sort('accountName')">Account Name<span [ngClass]="ascending['accountName'] ? 'caret' : 'caret caret-down'"></span></span>
+        </th>
+        <th><span (click)="sort('status')">Status<span [ngClass]="ascending['status'] ? 'caret' : 'caret caret-down'"></span></span>
+        </th>
+        <th><span (click)="sort('currency')">Currency<span [ngClass]="ascending['currency'] ? 'caret' : 'caret caret-down'"></span></span>
+        </th>
+        <th><span (click)="sort('balance')">Balance<span [ngClass]="ascending['balance'] ? 'caret' : 'caret caret-down'"></span></span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let invoice of sortedInvoices | accountNameFilter:searchKeyIn' (click)="onSelect(invoice)" [class.selected]="invoice === selectedInvoice && isClosedIn === false">
+        <td>{{invoice.type}}</td>
+        <td>{{invoice.accountName}}</td>
+        <td>{{invoice.status}}</td>
+        <td>{{invoice.currency}}</td>
+        <td>{{invoice.balance | currency:'USD':true}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

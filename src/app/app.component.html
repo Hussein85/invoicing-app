@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
-  <!--Invoice list-->
-  <div class="left-container">
+  <!--Left Container-->
+  <div  class="left-container">
 
     <div class="row">
       <div class="title">
@@ -12,47 +12,22 @@
           <a class="searchBar-image" type="button" dropdownToggle>
             <img src="../assets/images/filter.png">
           </a>    
-          <invoice-search-bar dropdownMenu class="dropdown-menu-right searchBar-dropDown" (searchKeyOut)="onClick($event)"> </invoice-search-bar>
+          <invoice-search-bar dropdownMenu class="dropdown-menu-right searchBar-dropDown" (searchKeyOut)="getSearchKey($event)"> </invoice-search-bar>
         </div>
 
       </div>
     </div>
 
-
-    <div class="row">
-      
-      <div class='table-container'>
-        <table class='table borderless' *ngIf=true>
-          <thead>
-            <tr>
-              <th class="invoices" colspan="5">Invoices</th>
-            </tr>
-            <tr>
-              <th><span (click)="sort('type')">Type<span [ngClass]="ascending['type'] ? 'caret' : 'caret caret-down'"></span></span></th>
-              <th><span (click)="sort('accountName')">Account Name<span [ngClass]="ascending['accountName'] ? 'caret' : 'caret caret-down'"></span></span></th>
-              <th><span (click)="sort('status')">Status<span [ngClass]="ascending['status'] ? 'caret' : 'caret caret-down'"></span></span></th>
-              <th><span (click)="sort('currency')">Currency<span [ngClass]="ascending['currency'] ? 'caret' : 'caret caret-down'"></span></span></th>
-              <th><span (click)="sort('balance')">Balance<span [ngClass]="ascending['balance'] ? 'caret' : 'caret caret-down'"></span></span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor='let invoice of sortedInvoices | accountNameFilter:searchKey' (click)="onSelect(invoice)" [class.selected]="invoice === selectedInvoice && isClosed === false">
-              <td>{{invoice.type}}</td>
-              <td>{{invoice.accountName}}</td>
-              <td>{{invoice.status}}</td>
-              <td>{{invoice.currency}}</td>
-              <td>{{invoice.balance | currency:'USD':true}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-         
-            
+    <!--Invoice-list Component-->
+    <div class="row">    
+      <invoice-list [searchKeyIn]="searchKey" [isClosedIn]="isClosed"
+        (invoiceOut)="getSelectedInvoice($event)" (isClosedOut)="getIsClosed($event)">
+      </invoice-list>              
     </div>
 
   </div>
 
-  <!--Invoice detail-->
+  <!--Right Container-->
   <div class="right-container">
 
     <img class="Rectangle-2" src="../assets/images/rectangle-2.png"
@@ -66,7 +41,8 @@
 
     <invoice-menu></invoice-menu>
 
-    <invoice-detail *ngIf="!isClosed" [invoice]="selectedInvoice" (close)="close($event)"></invoice-detail>
+     <!--Invoice-detail Component-->
+    <invoice-detail *ngIf="!isClosed" [invoice]="selectedInvoice" (close)="getIsClosed($event)"></invoice-detail>
   </div>
 
 </div>

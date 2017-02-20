@@ -1,0 +1,67 @@
+.caret {
+    margin-left: 7px;
+    cursor: pointer;
+}
+
+.caret-down{
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.table-container { 
+    margin-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+table {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.borderless td, .borderless th {
+    border: none;
+}
+
+.invoices {
+    font-size: 18px;
+    font-weight: 500;
+    color: #797979;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(194, 194, 194, 0.09);
+    cursor: pointer;   
+}
+
+
+.table thead tr:nth-child(2) {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6a6a6a;
+    border-top: 1px solid rgba(121, 121, 121, 0.13);
+    border-bottom: 1px solid rgba(121, 121, 121, 0.13);
+}
+
+.table th, .table td { 
+    border-top: none !important; 
+    padding-left: 30px; 
+    padding-top: 12px;   
+ }
+
+.table tbody tr {
+    font-size: 14px;
+    font-weight: 400;
+    color: #6a6a6a;
+}
+
+span {
+    cursor: pointer;
+}
+
+.selected {
+    background-color: rgba(194, 194, 194, 0.09);
+    border-left: solid 2px #0277ff;
+    cursor: pointer;
+}
